@@ -176,7 +176,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2022-09-05
+VENDOR_SECURITY_PATCH := 2023-01-23
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
