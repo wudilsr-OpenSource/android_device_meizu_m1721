@@ -169,6 +169,54 @@ namespace thermal {
 		},
 	};
 
+	std::vector<std::string> cpu_sensors_8953 =
+	{
+		"apc1-cpu0-usr",
+		"apc1-cpu1-usr",
+		"apc1-cpu2-usr",
+		"apc1-cpu3-usr",
+		"apc0-cpu0-usr",
+		"apc0-cpu1-usr",
+		"apc0-cpu2-usr",
+		"apc0-cpu3-usr",
+	};
+
+	std::vector<struct target_therm_cfg> sensor_cfg_sdm625 =
+	{
+		{
+			TemperatureType::CPU,
+			cpu_sensors_8953,
+			"",
+			95000,
+			115000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpu0-usr" },
+			"gpu0",
+			95000,
+			115000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpu1-usr" },
+			"gpu1",
+			95000,
+			115000,
+			true,
+		},
+		{
+			TemperatureType::SKIN,
+			{ "xo-therm-adc" },
+			"skin",
+			55000,
+			95000,
+			true,
+		},
+	};
+
 	std::vector<std::string> cpu_sensors_sdm710 =
 	{
 		"cpu0-silver-usr",
@@ -2405,6 +2453,7 @@ std::vector<std::string> cpu_sensors_cliffs = {
 		{364, sensor_cfg_439},
 		{416, sensor_cfg_439},
 		{437, sensor_cfg_439},
+		{293, sensor_cfg_sdm625},
 		{349, sensor_cfg_sdm632},
 		{336, sensor_cfg_sdm710}, // SDM670
 		{360, sensor_cfg_sdm710}, // SDM710
