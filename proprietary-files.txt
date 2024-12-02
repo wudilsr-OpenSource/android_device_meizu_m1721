@@ -2052,6 +2052,12 @@ vendor/etc/perf/perfconfigstore.xml|de7a673eca27fb44b7dcd34c60d21f7ffbd2b9d8
 vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
 vendor/etc/perf/targetresourceconfigs.xml|c7575bce83e7d83a68e260437ff0ba164dfcd25c
 
+# Perf (deps) - from FP3-REL-6.A.031.5-gms-fa7632b5-user
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so|37b3c0a0cb209e8ea169218abe4615e516697f13
+vendor/lib/vendor.qti.memory.pasrmanager@1.1.so|ab8825d3e8a63b05e77766c5b722b9a58a1bfc5d
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|7e332989976f3549fcdb6c7b990fef3844dd36ae
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|4254d087742dd950f0f524106e6262d1e15dda60
+
 # Peripheral manager - from FP3-REL-6.A.031.5-gms-fa7632b5-user
 vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
 vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
