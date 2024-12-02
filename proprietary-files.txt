@@ -1839,6 +1839,7 @@ vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
 # DRM - from FP3-REL-6.A.031.5-gms-fa7632b5-user
 vendor/bin/qseecomd|5b40595c23a54d13fb611311a4ab9b22a9428e86
+vendor/lib/libQSEEComAPI.so|2ab0e804dfc482a60a8f02247a6adf2435a41e6d
 vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
 vendor/lib64/libGPreqcancel_svc.so|d539a9c7368973264e71700824b21ce8e5339441
 vendor/lib64/libQSEEComAPI.so|c94db2c194c9edebe5e6c40d63bec1589432d62e
@@ -2134,7 +2135,10 @@ vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
+vendor/lib/libconfigdb.so|f174fb08287c05b60be5ea16d7ff2bfdf4cf07ca
 vendor/lib/libmdmdetect.so|a2df5e8eba8bd275de62bbb7c0f6af1c78fbc7a0
+vendor/lib/libnetmgr.so|2c4ddf221aac92c80bb64fe7945b364c4ae434fe
+vendor/lib/libxml.so|797cd6f5775e18ab6843bf2877859c25c45c8fa2
 vendor/lib64/libconfigdb.so|6634f23eebd1156c9053b5a77163ee7a058a1916
 vendor/lib64/liblqe.so|02191d7bfeca08ec8b89550a27bef02c3291609e
 vendor/lib64/libmdmdetect.so|1acafe6bd37e770d97649b703d2b695d790d2191
@@ -2264,6 +2268,7 @@ vendor/lib64/sensors.ssc.so|aeab604388f7e41e2da7dad76bf22bcf47a632db
 
 # Thermal - from Onclite PKQ1.181021.001/V10.2.5.0.PFLCNXM
 vendor/bin/thermal-engine|562035759ae60b3c5267a01293f1aeaa3f40c44b
+vendor/lib/libthermalclient.so|241d1e751b3a96c67ac5b618ef38bb39d2a94fa7
 vendor/lib64/libthermalclient.so|54121e31e4a5170f8c50e36ddb57685b6c538a21
 vendor/lib64/libthermalfeature.so|fa497ce7bcc61d1460d1a08a68b3630c287efb70
 
