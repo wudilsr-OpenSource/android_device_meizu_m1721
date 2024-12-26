@@ -24,5 +24,5 @@ install_symlink {
     name: "firmware_WCNSS_wlan_dictionary.dat_symlink",
     vendor: true,
     installed_location: "firmware/wlan/prima/WCNSS_wlan_dictionary.dat",
-    symlink_target: "/mnt/vendor/persist/WCNSS_wlan_dictionary.dat",
+    symlink_target: "/vendor/etc/wifi/WCNSS_wlan_dictionary.dat",
 }
