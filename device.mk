@@ -180,7 +180,6 @@ PRODUCT_PACKAGES += \
 
 # Fwk-detect
 PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
 # Gatekeeper HAL
