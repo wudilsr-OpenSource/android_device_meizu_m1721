@@ -2069,8 +2069,8 @@ vendor/lib/libdiag.so|0a9a6aa74b1728bfb9c6b3ccd7cf0a5bdbc29434
 vendor/lib64/libdiag.so|174ff3f940288d2d1503230465dfe917ab9d155b
 
 # QMI (shared dependencies) - from FP3-REL-6.A.031.5-gms-fa7632b5-user
-etc/permissions/privapp-permissions-qti.xml|937752129fb20114d4c36f251ee4d2571132990c
-etc/sysconfig/qti_whitelist.xml|4fd76e2942b4ad5a7f6cacf1668f710a9488347a
+system/etc/permissions/privapp-permissions-qti.xml|937752129fb20114d4c36f251ee4d2571132990c
+system/etc/sysconfig/qti_whitelist.xml|4fd76e2942b4ad5a7f6cacf1668f710a9488347a
 vendor/etc/qmi_fw.conf|7aa8186a05b3e1ac6ce556bb6e9ae613df0e82c1
 vendor/lib/libqmi_cci.so|6b8aae60c097ef8ae18f2497ed803bfdbab4e252
 vendor/lib/libqmi_common_so.so|487dab3792cd55351cdaf0a0d0e5fb974860f992
