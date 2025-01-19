@@ -2235,11 +2235,9 @@ system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/l
 vendor/bin/sensors.qti|cba682ce9a06fd2e1fbc3e3d63f9df524252b34d
 vendor/lib/libsensor1.so|59289e1283feea150799fd4f60b0dd146f912990
 vendor/lib/libsensor_reg.so|37916892236519fd374c7fca3b04c3f4940e697e
-vendor/lib/sensor_calibrate.so|8ecc78579b7d6f62cc42fc285ba324c96a93a1fc
 vendor/lib/sensors.ssc.so|30d8799c92db27699c90e12243447d7d999fbc85
 vendor/lib64/libsensor1.so|f78638f1a87b99284e7aa2daa47e44adced55b70
 vendor/lib64/libsensor_reg.so|c5ba27049d5f36b0877358c154de67080b66e7de
-vendor/lib64/sensor_calibrate.so|572b90e2f5362144c62cdb503bcd9834eca48b10
 vendor/lib64/sensors.ssc.so|aeab604388f7e41e2da7dad76bf22bcf47a632db
 
 # Thermal - from Onclite PKQ1.181021.001/V10.2.5.0.PFLCNXM
