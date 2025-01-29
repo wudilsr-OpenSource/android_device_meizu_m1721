@@ -49,6 +49,14 @@ persist.vendor.mwqem.           u:object_r:vendor_mwqem_prop:s0
 # Perf
 vendor.target.init.complete     u:object_r:vendor_mpctl_prop:s0
 
+# Ril
+ro.build.software.version       u:object_r:vendor_radio_prop:s0
+ro.fota.oem                     u:object_r:vendor_radio_prop:s0
+ro.miui.region                  u:object_r:vendor_radio_prop:s0
+ro.miui.ui.version.code         u:object_r:vendor_radio_prop:s0
+ro.product.marketname           u:object_r:vendor_radio_prop:s0
+ro.product.mod_device           u:object_r:vendor_radio_prop:s0
+
 # SLM
 persist.vendor.slm.             u:object_r:vendor_slm_prop:s0
 
