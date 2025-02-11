@@ -189,16 +189,16 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti:64 \
-    android.hardware.gnss@2.1-service-qti \
-    gps.conf \
+    android.hardware.gnss@2.1-service-qti
+
+PRODUCT_PACKAGES += \
     flp.conf \
-    gnss_antenna_info.conf \
     gnss@2.0-base.policy \
     gnss@2.0-xtra-daemon.policy \
-    libloc_pla_headers \
-    liblocation_api_headers \
-    libgps.utils_headers \
-    liblocation_api \
+    gnss_antenna_info.conf \
+    gps.conf
+
+PRODUCT_PACKAGES += \
     libbatching:64 \
     libgeofencing:64 \
     libgnss:64
