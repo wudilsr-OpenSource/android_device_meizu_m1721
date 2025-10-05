@@ -43,6 +43,9 @@ persist.vendor.data.mode=concurrent
 dalvik.vm.dex2oat64.enabled=true
 pm.dexopt.shared=quicken
 
+# Display
+debug.hwui.renderer=vulkan
+
 # Fingerprint
 persist.qfp=false
 
