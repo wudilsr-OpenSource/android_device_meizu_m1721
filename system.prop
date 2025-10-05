@@ -41,6 +41,7 @@ persist.vendor.data.mode=concurrent
 
 # Dexopt
 dalvik.vm.dex2oat64.enabled=true
+pm.dexopt.shared=quicken
 
 # Fingerprint
 persist.qfp=false
