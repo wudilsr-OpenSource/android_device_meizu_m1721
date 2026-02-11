@@ -363,7 +363,8 @@
     <!-- Whether to cancel fingerprint operation if not idle -->
     <bool name="config_fpCancelIfNotIdle">true</bool>
 
-    <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name. -->
-    <string name="config_displayWhiteBalanceColorTemperatureSensorName">com.google.sensor.color</string>
+    <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name.
+         Device doesn't have a color temperature sensor, leave empty to disable the feature. -->
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName" translatable="false"></string>
 
 </resources>
