@@ -376,8 +376,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
-    frameworks/base/boot/boot-image-profile.txt \
-    frameworks/base/boot/boot-image-profile-extra.txt
+    frameworks/base/boot/boot-image-profile.txt
 
 # Reduce system image size by limiting debug info
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
