@@ -188,6 +188,10 @@ BOARD_VNDK_VERSION := current
 # USB
 TARGET_USES_USB_GADGET_HAL := true
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # Wi-Fi
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
