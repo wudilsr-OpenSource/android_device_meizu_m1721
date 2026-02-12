@@ -161,3 +161,4 @@ zygote.critical_window.minute=10
 
 # Logs 
 persist.log.tag.ACDB-LOADER=S
+persist.log.tag.QTIPowerHAL=S
