@@ -2136,6 +2136,7 @@ vendor/lib64/libqti-util.so|834cc98315887e57a5f229f9ee1a0d20d0d8f4c3
 vendor/lib64/libqti-util-vendor.so|bdc34fa1fdafffbbbd16ab1b8c031371013ea907
 
 # Perf (configs) - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/etc/msm_irqbalance.conf|3e45e1da03ab49ce9d3f855011aca00f1e417a53
 vendor/etc/perf/commonresourceconfigs.xml|459a18579580713fd839f93c86d6b1f7f028be1e
 vendor/etc/perf/perfboostsconfig.xml|da5ae082fe1d5d8e6afea68430e12e56cbf168d2
 vendor/etc/perf/perfconfigstore.xml|de7a673eca27fb44b7dcd34c60d21f7ffbd2b9d8
@@ -2163,12 +2164,14 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|dcfdc04b4e0c6e6a4ffa60e1694268bd03
 system_ext/lib64/libdiag_system.so|1e0006fd3be67cbb50fb28ecfec028bddcead4fe
 system_ext/lib64/vendor.qti.diaghal@1.0.so|abe51fdbdcbf3449012395cf0ade8aa8d267dbe6
 vendor/bin/irsc_util|121deb2d6fd21b122c6a8ca8b30ef167f6b90f61
+vendor/etc/sec_config|9cc062dd428340338696aa58b1ed8846c081fd96
 vendor/lib/libdiag.so|1a946b18fcd5de254df8d631cd7677f595b3b2c8
 vendor/lib64/libdiag.so|8d92025445dcf905778a15e76adc1afdc3395642
 
 # QMI (shared dependencies) - LA.UM.9.6.3.r1-06200-89xx.0
 etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
 etc/sysconfig/qti_whitelist.xml|e280dc9a012bd864c3fa91cf4439338d54218730
+vendor/etc/qmi_fw.conf|7aa8186a05b3e1ac6ce556bb6e9ae613df0e82c1
 vendor/lib64/libdsi_netctrl.so|6cd16a99432f27d76f2dffd920dedde1baac3bbc
 vendor/lib64/libdsutils.so|3628bfbb317348a5047aa38c8d12924088d361ab
 vendor/lib64/libidl.so|857f7a75a51ade7d3621f7fa6da0e9461244ca01
@@ -2365,6 +2368,8 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 # Sensors - from LA.UM.9.6.2.r1-04200-89xx.0
 system_ext/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|81934fd454fd30282ef1a8a90b7374317f6c42de
 system_ext/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|32257292ed8c5b2e2f905571b82bb26383a1a041
+vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
+vendor/etc/sensors/sensor_def_qcomdev.conf|50a37ee73952f73306c37e1a9a0f9f96d5ae54c2
 vendor/bin/sensors.qti|04cede687413ba92210f908e796c423e012f974b
 vendor/lib/libsensor1.so|d2f7ef0d9bc888973f5b10b828a988edd2675967
 vendor/lib/libsensor_reg.so|733a12b41dc0751b54c01a9ad980f0d039e45ab2
