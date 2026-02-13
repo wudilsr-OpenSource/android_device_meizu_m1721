@@ -8,18 +8,39 @@
         <boolean name="show_cdma_choices_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="config_enable_display_14digit_imei" value="false" />
+        <!-- Determines whether UI extensions for video calls should be used or not -->
         <boolean name="video_call_use_ext" value="true" />
+        <!-- Determines if a customized video ui support is required or not -->
         <boolean name="use_custom_video_ui" value="false" />
         <boolean name="config_hide_preview_in_vt_confcall" value="false" />
         <boolean name="config_carrier_cs_retry_available" value="false" />
+        <!-- Controls modify call capabilities
+             FALSE - default capabilities will be retained
+             TRUE - remove modify call capabilities which will hide modify call button -->
         <boolean name="remove_modify_call_capability" value="false" />
+        <!-- Config to show/hide Video quality toast -->
         <boolean name="show_video_quality_toast" value="false" />
+        <!-- Config to show/hide call session event toast like player start/stop -->
         <boolean name="show_call_session_event_toast" value="false" />
+        <!-- Config to show/hide data usage toast -->
         <boolean name="show_data_usage_toast" value="false" />
+        <!-- Config to enable video conference call support -->
         <boolean name="support_video_conference_call_bool" value="true" />
+        <!-- Config that controls whether to show static image related UI elements or not
+             eg. static image option under IMS Settings, static image in preview window,
+             hide me button in active call screen etc. -->
         <boolean name="show_static_image_ui" value="false" />
+        <!-- Config that controls whether to stop video preview video and show static image
+             in video preview or not -->
         <boolean name="transmit_static_image" value="false" />
         <boolean name="config_enriched_call_capable" value="false" />
+
+        <!-- If this is true, the SIM card (through Customer Service Profile EF file) will be
+         able to prevent manual operator selection. If false, this SIM setting will be
+         ignored and manual operator selection will always be available. See
+         CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
+        <boolean name="csp_enabled_bool" value="true" />
+
     </carrier_config>
     <carrier_config mcc="222" mnc="01">
         <boolean name="config_display_wfc_mode" value="false" />
