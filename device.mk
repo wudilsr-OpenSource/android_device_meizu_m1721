@@ -212,11 +212,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
-# Healthd
+# Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl:64 \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
