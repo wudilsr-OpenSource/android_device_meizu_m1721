@@ -400,7 +400,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy \
+    android.hardware.wifi@1.0-service \
     android.system.net.netd@1.1.vendor:64 \
     libcld80211:64 \
     libwpa_client:64 \
