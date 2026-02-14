@@ -260,7 +260,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.meizu_m1721
+    android.hardware.light-service.meizu_m1721
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
