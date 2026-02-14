@@ -366,8 +366,5 @@
     <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name.
          Device doesn't have a color temperature sensor, leave empty to disable the feature. -->
     <string name="config_displayWhiteBalanceColorTemperatureSensorName" translatable="false"></string>
-    
-    <!-- The max scale for the wallpaper when it's zoomed in -->
-    <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
 
 </resources>
