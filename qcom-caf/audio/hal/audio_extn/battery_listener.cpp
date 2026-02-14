@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2018, The Linux Foundation. All rights reserved.
+* Copyright (c) 2019, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -29,7 +29,8 @@
 #define LOG_TAG "audio_hw::BatteryListener"
 #include <log/log.h>
 #include <android/hidl/manager/1.0/IServiceManager.h>
-#include <android/hardware/health/2.0/IHealth.h>
+#include <android/hardware/health/2.1/IHealth.h>
+#include <android/hardware/health/2.1/IHealthInfoCallback.h>
 #include <healthhalutils/HealthHalUtils.h>
 #include <hidl/HidlTransportSupport.h>
 #include <thread>
@@ -40,9 +41,9 @@ using android::hardware::Return;
 using android::hardware::Void;
 using android::hardware::health::V1_0::BatteryStatus;
 using android::hardware::health::V1_0::toString;
-using android::hardware::health::V2_0::get_health_service;
-using android::hardware::health::V2_0::HealthInfo;
-using android::hardware::health::V2_0::IHealth;
+using android::hardware::health::V2_1::HealthInfo;
+using android::hardware::health::V2_1::IHealthInfoCallback;
+using android::hardware::health::V2_1::IHealth;
 using android::hardware::health::V2_0::Result;
 using android::hidl::manager::V1_0::IServiceManager;
 using namespace std::literals::chrono_literals;
@@ -52,21 +53,24 @@ namespace android {
 #define GET_HEALTH_SVC_RETRY_CNT 5
 #define GET_HEALTH_SVC_WAIT_TIME_MS 500
 
-struct BatteryListenerImpl : public hardware::health::V2_0::IHealthInfoCallback,
+struct BatteryListenerImpl : public hardware::health::V2_1::IHealthInfoCallback,
                              public hardware::hidl_death_recipient {
     typedef std::function<void(bool)> cb_fn_t;
     BatteryListenerImpl(cb_fn_t cb);
     virtual ~BatteryListenerImpl ();
     virtual hardware::Return<void> healthInfoChanged(
-        const hardware::health::V2_0::HealthInfo& info);
+            const hardware::health::V2_0::HealthInfo& info);
+    virtual hardware::Return<void> healthInfoChanged_2_1(
+            const hardware::health::V2_1::HealthInfo& info);
     virtual void serviceDied(uint64_t cookie,
                              const wp<hidl::base::V1_0::IBase>& who);
     bool isCharging() {
         std::lock_guard<std::mutex> _l(mLock);
         return statusToBool(mStatus);
     }
+    void reset();
   private:
-    sp<hardware::health::V2_0::IHealth> mHealth;
+    sp<hardware::health::V2_1::IHealth> mHealth;
     status_t init();
     BatteryStatus mStatus;
     cb_fn_t mCb;
@@ -88,7 +92,7 @@ status_t BatteryListenerImpl::init()
         return INVALID_OPERATION;
 
     do {
-        mHealth = get_health_service();
+        mHealth = IHealth::getService();
         if (mHealth != NULL)
             break;
         usleep(GET_HEALTH_SVC_WAIT_TIME_MS * 1000);
@@ -164,15 +168,19 @@ BatteryListenerImpl::BatteryListenerImpl(cb_fn_t cb) :
 
 BatteryListenerImpl::~BatteryListenerImpl()
 {
-    {
-        std::lock_guard<std::mutex> _l(mLock);
-        if (mHealth != NULL)
-            mHealth->unlinkToDeath(this);
-    }
-    mDone = true;
     mThread->join();
 }
 
+void BatteryListenerImpl::reset(){
+    std::lock_guard<std::mutex> _l(mLock);
+    if (mHealth != nullptr) {
+        mHealth->unregisterCallback(this);
+        mHealth->unlinkToDeath(this);
+    }
+    mStatus = BatteryStatus::UNKNOWN;
+    mDone = true;
+    mCond.notify_one();
+}
 void BatteryListenerImpl::serviceDied(uint64_t cookie __unused,
                                      const wp<hidl::base::V1_0::IBase>& who)
 {
@@ -207,6 +215,13 @@ Return<void> BatteryListenerImpl::healthInfoChanged(
     return Void();
 }
 
+Return<void> BatteryListenerImpl::healthInfoChanged_2_1(
+        const hardware::health::V2_1::HealthInfo& info) {
+    ALOGV("healthInfoChanged_2_1: %d", info.legacy.legacy.batteryStatus);
+    healthInfoChanged(info.legacy);
+    return Void();
+}
+
 static sp<BatteryListenerImpl> batteryListener;
 status_t batteryPropertiesListenerInit(BatteryListenerImpl::cb_fn_t cb)
 {
@@ -216,6 +231,7 @@ status_t batteryPropertiesListenerInit(BatteryListenerImpl::cb_fn_t cb)
 
 status_t batteryPropertiesListenerDeinit()
 {
+    batteryListener->reset();
     batteryListener.clear();
     return OK;
 }
@@ -228,19 +244,19 @@ bool batteryPropertiesListenerIsCharging()
 } // namespace android
 
 extern "C" {
-void audio_extn_battery_properties_listener_init(battery_status_change_fn_t fn)
+void battery_properties_listener_init(battery_status_change_fn_t fn)
 {
     android::batteryPropertiesListenerInit([=](bool charging) {
                                                fn(charging);
                                           });
 }
 
-void audio_extn_battery_properties_listener_deinit()
+void battery_properties_listener_deinit()
 {
     android::batteryPropertiesListenerDeinit();
 }
 
-bool audio_extn_battery_properties_is_charging()
+bool battery_properties_is_charging()
 {
     return android::batteryPropertiesListenerIsCharging();
 }

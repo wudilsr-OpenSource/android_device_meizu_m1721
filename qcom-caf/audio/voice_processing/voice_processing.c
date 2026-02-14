@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2013 The Android Open Source Project
+ * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -414,7 +415,7 @@ static struct session_s *get_session(int32_t id, int32_t  sessionId, int32_t  io
 
     list_for_each(node, &session_list) {
         session = node_to_item(node, struct session_s, node);
-        if (session->io == ioId) {
+        if (session->id == sessionId) {
             if (session->created_msk & (1 << id)) {
                 ALOGV("get_session() effect %d already created", id);
                 return NULL;
@@ -582,7 +583,8 @@ static int fx_command(effect_handle_t  self,
                     pReplyData == NULL ||
                     *replySize < (int)sizeof(effect_param_t) ||
                     // constrain memcpy below
-                    ((effect_param_t *)pCmdData)->psize > *replySize - sizeof(effect_param_t)) {
+                    ((effect_param_t *)pCmdData)->psize > *replySize - sizeof(effect_param_t) ||
+                    ((effect_param_t *)pCmdData)->psize > cmdSize - sizeof(effect_param_t)) {
                 ALOGV("fx_command() EFFECT_CMD_GET_PARAM invalid args");
                 return -EINVAL;
             }
