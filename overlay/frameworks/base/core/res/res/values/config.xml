@@ -355,4 +355,7 @@
          Device doesn't have a color temperature sensor, leave empty to disable the feature. -->
     <string name="config_displayWhiteBalanceColorTemperatureSensorName" translatable="false"></string>
 
+    <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
+    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+
 </resources>
