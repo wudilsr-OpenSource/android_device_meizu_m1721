@@ -2371,6 +2371,7 @@ static void set_platform_defaults(struct platform_data * my_data)
     backend_tag_table[SND_DEVICE_IN_SPDIF] = strdup("spdif-in");
     backend_tag_table[SND_DEVICE_IN_HDMI_MIC] = strdup("hdmi-in");
     backend_tag_table[SND_DEVICE_IN_HDMI_ARC] = strdup("hdmi-arc-in");
+    backend_tag_table[SND_DEVICE_OUT_SPEAKER] = strdup("speaker");
     backend_tag_table[SND_DEVICE_OUT_BT_SCO] = strdup("bt-sco");
     backend_tag_table[SND_DEVICE_OUT_BT_SCO_WB] = strdup("bt-sco-wb");
     backend_tag_table[SND_DEVICE_OUT_BT_SCO_SWB] = strdup("bt-sco-swb");
