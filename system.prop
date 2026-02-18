@@ -49,6 +49,10 @@ debug.hwui.renderer=vulkan
 # Fingerprint
 persist.qfp=false
 
+# FM
+ro.fm.transmitter=false
+vendor.hw.fm.init=0
+
 # LMKD/PSI
 ro.lmk.use_psi=true
 ro.lmk.low=1001
