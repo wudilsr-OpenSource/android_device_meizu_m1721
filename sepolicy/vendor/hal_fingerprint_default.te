@@ -50,3 +50,5 @@ allow hal_fingerprint_default system_data_file:file { read open getattr };
 
 # Allow fp to read boot status prop
 get_prop(hal_fingerprint_default, boot_status_prop)
+
+dontaudit hal_fingerprint_default default_android_vndservice:service_manager find;
