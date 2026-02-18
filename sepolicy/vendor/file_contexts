@@ -16,6 +16,10 @@
 /(vendor|system/vendor)/bin/goodixfingerprintd  u:object_r:goodixfingerprintd_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh	u:object_r:init_fingerprint_exec:s0
 
+# Graphics Libs
+/vendor/lib(64)?/libadreno_app_profiles\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgpudataproducer\.so        u:object_r:same_process_hal_file:s0
+
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.meizu_m1721    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.meizu_m1721                           u:object_r:hal_light_default_exec:s0
