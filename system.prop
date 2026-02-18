@@ -7,6 +7,8 @@ ro.config.media_vol_steps=25
 vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 
 # Camera
+persist.camera.gyro.android=0
+persist.camera.gyro.disable=1
 persist.camera.mct.debug=0
 persist.camera.iface.logs=0
 persist.camera.imglib.logs=0
