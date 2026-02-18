@@ -33,6 +33,9 @@ ro.vendor.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+
 # Dexopt
 dalvik.vm.dex2oat64.enabled=true
 pm.dexopt.shared=quicken
@@ -72,7 +75,7 @@ vendor.video.disable.ubwc=1
 
 #codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF DTS FLV 3GP 3G2 MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF
 vendor.mm.enable.qcom_parser=523231
-
+arm64.memtag.process.system_
 # Mwqem
 persist.vendor.mwqem.enable=1
 
