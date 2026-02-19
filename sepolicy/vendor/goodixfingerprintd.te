@@ -33,5 +33,9 @@ allow goodixfingerprintd self:{ netlink_socket netlink_generic_socket } create_s
 # Allow reading firmware file
 r_dir_file(goodixfingerprintd, firmware_file)
 
+# Allow access to fingerprint properties
+get_prop(goodixfingerprintd, vendor_fp_prop)
+set_prop(goodixfingerprintd, vendor_fp_prop)
+
 # Ignore all logging requests
 dontaudit goodixfingerprintd storage_file:dir search;
