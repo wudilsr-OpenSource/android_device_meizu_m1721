@@ -384,7 +384,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
-    thermal.msm8953:64
+    android.hardware.thermal@2.0-service.qti.meizu_m1721
 
 # Touch features
 PRODUCT_PACKAGES += \
