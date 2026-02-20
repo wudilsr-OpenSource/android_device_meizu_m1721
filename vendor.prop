@@ -110,7 +110,13 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # Media
 debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=16
+vendor.vidc.debug.level=0
+vendor.vidc.dec.downscalar_height=1088
+vendor.vidc.dec.downscalar_width=1920
+vendor.vidc.enc.disable_bframes=1
+vendor.vidc.enc.disable.pq=true
 vendor.vidc.disable.split.mode=1
+vendor.video.disable.ubwc=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -118,6 +124,8 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.data.iwlan.enable=true
+persist.vendor.data.profile_update=true
+persist.vendor.radio.add_power_save=1
 persist.vendor.radio.calls.on.ims=0
 persist.vendor.radio.csvt.enabled=false
 persist.vendor.radio.sw_mbn_update=0
