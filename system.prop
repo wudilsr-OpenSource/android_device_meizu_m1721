@@ -68,7 +68,6 @@ mmp.enable.3g2=true
 vendor.vidc.debug.level=0
 vendor.vidc.dec.downscalar_height=1088
 vendor.vidc.dec.downscalar_width=1920
-vendor.vidc.disable.split.mode=1
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=true
 vendor.video.disable.ubwc=1
@@ -117,9 +116,7 @@ debug.sf.earlyGl.app.duration=21000000
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.predict_hwc_composition_strategy=0
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.max_virtual_display_dimension=4096
 
 # System
 persist.sys.binary_xml=false
@@ -144,9 +141,6 @@ ro.hw_timeout_multiplier=3
 
 # WiFi
 persist.mm.sta.enable=0
-
-# WFD
-persist.hwc.enable_vds=1
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
