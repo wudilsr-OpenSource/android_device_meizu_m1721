@@ -6,6 +6,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     user system
     group system input uhid
     task_profiles ServiceCapacityLow
+    interface android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint default
 
 service vendor.gx_fpd /vendor/bin/goodixfingerprintd
     disabled
