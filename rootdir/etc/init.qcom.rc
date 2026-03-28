@@ -236,8 +236,8 @@ on property:sys.boot_completed=1
 
 # DSDS - Restart qcrild on data switch
 on property:persist.sys.radio.mobile_data_swap=1
+    exec /bin/sleep 3s
     restart vendor.qcrild
-    exec /bin/sleep 2
     restart vendor.qcrild2
 
 service qcom-c_main-sh /vendor/bin/init.class_main.sh

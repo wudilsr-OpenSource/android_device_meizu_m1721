@@ -134,20 +134,24 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0_32 \
-    android.hardware.camera.common@1.0 \
-    android.hardware.camera.device@3.3:64 \
-    android.hardware.camera.device@3.4:64 \
-    android.hardware.camera.device@3.5:64 \
+    android.frameworks.displayservice@1.0.vendor \
+    android.hidl.base@1.0.vendor \
+    android.hardware.camera.device@3.5 \
     android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-external \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5:64 \
-    android.hardware.camera.provider@2.6:64 \
-    vendor.qti.hardware.camera.device@1.0 \
+    android.hardware.camera.provider@2.6 \
+    camera.device@1.0-impl \
+    camera.device@3.5-impl \
+    camera.device@3.6-external-impl \
     camera.msm8953 \
     libcamshim \
-    libui_shim
+    libui_shim \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor
+
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
