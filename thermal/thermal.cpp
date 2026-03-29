@@ -152,9 +152,10 @@ Return<void> Thermal::getCurrentCoolingDevices(
 	hidl_vec<CoolingDevice> cdev;
 
 	status.code = ThermalStatusCode::SUCCESS;
-	if (!utils.isCdevInitialized())
-		return exit_hal(_hidl_cb, cdev,
-			"ThermalHAL not initialized properly.");
+	if (!utils.isCdevInitialized()) {
+		_hidl_cb(status, cdev);
+		return Void();
+	}
 	if (utils.readCdevStates(filterType, type, cdev) <= 0)
 		return exit_hal(_hidl_cb, cdev,
 			"Failed to read thermal cooling devices.");
@@ -172,9 +173,11 @@ Return<void> Thermal::getCurrentTemperatures(
 	hidl_vec<Temperature> temperatures;
 
 	status.code = ThermalStatusCode::SUCCESS;
-	if (!utils.isSensorInitialized())
-		return exit_hal(_hidl_cb, temperatures,
-			"ThermalHAL not initialized properly.");
+	if (!utils.isSensorInitialized()) {
+		temperatures = {dummy_temp_2_0};
+		_hidl_cb(status, temperatures);
+		return Void();
+	}
 
 	if (utils.readTemperatures(filterType, type, temperatures) <= 0) {
 		if (filterType && type != dummy_temp_2_0.type) {
@@ -200,9 +203,10 @@ Return<void> Thermal::getTemperatureThresholds(
 	hidl_vec<TemperatureThreshold> thresh;
 
 	status.code = ThermalStatusCode::SUCCESS;
-	if (!utils.isSensorInitialized())
-		return exit_hal(_hidl_cb, thresh,
-			"ThermalHAL not initialized properly.");
+	if (!utils.isSensorInitialized()) {
+		_hidl_cb(status, thresh);
+		return Void();
+	}
 
 	if (utils.readTemperatureThreshold(filterType, type, thresh) <= 0)
 		return exit_hal(_hidl_cb, thresh,
