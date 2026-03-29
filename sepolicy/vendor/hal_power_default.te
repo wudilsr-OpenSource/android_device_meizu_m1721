@@ -1,5 +1,10 @@
 allow hal_power_default sysfs_graphics:file r_file_perms;
 
+# CPU DMA latency
+allow hal_power_default device_latency:chr_file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:dir search;
+
 # Allow writing to files in /proc/touchpanel
 allow hal_power_default proc_touchpanel:dir search;
 allow hal_power_default proc_touchpanel:file rw_file_perms;

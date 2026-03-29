@@ -143,6 +143,5 @@ ro.zram.periodic_wb_delay_hours=24
 # Zygote
 zygote.critical_window.minute=10
 
-# Logs 
+# Logs
 persist.log.tag.ACDB-LOADER=S
-persist.log.tag.QTIPowerHAL=S
