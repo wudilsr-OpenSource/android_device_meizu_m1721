@@ -77,7 +77,7 @@ subsystem mem_buf_vm
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
 
-#permsissions for BT/FM
+#permissions for BT
 /dev/smd2                 0660   bluetooth  bluetooth
 /dev/smd3                 0660   bluetooth  bluetooth
 /dev/btpower              0660   bluetooth  system
@@ -220,7 +220,6 @@ subsystem mem_buf_vm
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_hweffects        0660   system     audio
 /dev/msm_cad              0660   system     audio
-/dev/msm_fm               0660   system     audio
 /dev/msm_mvs              0660   system     audio
 /dev/msm_pcm_lp_dec       0660   system     audio
 /dev/msm_preproc_ctl      0660   system     audio
