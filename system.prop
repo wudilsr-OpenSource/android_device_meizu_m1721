@@ -9,11 +9,11 @@ vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 # Camera
 persist.camera.gyro.android=0
 persist.camera.gyro.disable=1
-persist.camera.mct.debug=0
 persist.camera.iface.logs=0
 persist.camera.imglib.logs=0
 persist.camera.isp.clock.optmz=0
 persist.camera.isp.debug=0
+persist.camera.mct.debug=0
 persist.camera.sensor.debug=0
 persist.camera.stats.test=5
 persist.vendor.camera.display.lmax=1280x720
@@ -42,6 +42,7 @@ pm.dexopt.shared=quicken
 
 # Display
 debug.hwui.renderer=vulkan
+debug.hwui.skia_atrace_enabled=false
 debug.sf.latch_unsignaled=1
 
 # Fingerprint
@@ -103,11 +104,11 @@ ro.build.shutdown_timeout=2
 # SurfaceFlinger
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
-debug.sf.late.app.duration=20500000
-debug.sf.early.sf.duration=21000000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=13500000
-debug.sf.earlyGl.app.duration=21000000
+debug.sf.late.app.duration=16600000
+debug.sf.early.sf.duration=16600000
+debug.sf.early.app.duration=16600000
+debug.sf.earlyGl.sf.duration=16600000
+debug.sf.earlyGl.app.duration=16600000
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.predict_hwc_composition_strategy=0
