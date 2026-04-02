@@ -121,5 +121,35 @@
             Id="0x00001301" Enable="true" Target="msm8953"
             Resources="0x40800000, 0x4E0, 0x40800100, 0x4E0, 0x40804000, 0x4E0, 0x40804100, 0x4E0, 0x4280C000, 0x156,
             0x42810000, 0x156, 0x42814000, 0x1E4F"/>
+        <!--launch boost-->
+        <!-- B CPU - above_hispeed_delay of 0 ms -->
+        <!-- B CPU - go hispeed load 90 -->
+        <!-- B CPU - hispeed freq of 1.0 GHz -->
+        <!-- B CPU - target load of 90 -->
+        <!-- L CPU - above_hispeed_delay of 0 ms -->
+        <!-- L CPU - go hispeed load 90 -->
+        <!-- L CPU - hispeed freq of 768 MHz -->
+        <!-- L CPU - target load of 90 -->
+        <!-- B CPU - Cluster min freq ~1.4 GHz -->
+        <!-- L CPU - Cluster min freq ~1.0 GHz -->
+        <Config
+            Id="0x00001041" Enable="true" Target="msm8953"
+            Resources="0x41400000, 0x0, 0x41410000, 0x5A, 0x41414000, 0x3E8, 0x41420000, 0x5A,
+            0x41400100, 0x0, 0x41410100, 0x5A, 0x41414100, 0x300, 0x41420100, 0x5A,
+            0x40804000, 0x579, 0x40804100, 0x3E8" />
+
+        <!--interaction boost-->
+        <!-- B CPU - above_hispeed_delay of 0 ms -->
+        <!-- B CPU - go hispeed load 90 -->
+        <!-- B CPU - hispeed freq of 806 MHz -->
+        <!-- B CPU - target load of 90 -->
+        <!-- L CPU - above_hispeed_delay of 0 ms -->
+        <!-- L CPU - go hispeed load 90 -->
+        <!-- L CPU - hispeed freq of 556 MHz -->
+        <!-- L CPU - target load of 90 -->
+        <Config
+            Id="0x00001040" Enable="true" Target="msm8953"
+            Resources="0x41400000, 0x0, 0x41410000, 0x5A, 0x41414000, 0x326, 0x41420000, 0x5A,
+            0x41400100, 0x0, 0x41410100, 0x5A, 0x41414100, 0x22C, 0x41420100, 0x5A" />
     </Powerhint>
 </HintConfigs>
