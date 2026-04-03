@@ -29,22 +29,22 @@ namespace implementation {
 GloveMode::GloveMode() {
 }
 
-constexpr const char kControlPath[] = "/sys/class/tp_glove/device/glove_enable";
+constexpr const char kControlPath[] = "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_glove_mode";
 
 // Methods from ::vendor::lineage::touch::V1_0::IGloveMode follow.
 Return<bool> GloveMode::isEnabled() {
     std::string buf;
 
-if (!android::base::ReadFileToString(kControlPath, &buf, true)) {
+    if (!android::base::ReadFileToString(kControlPath, &buf, true)) {
         LOG(ERROR) << "Failed to read from " << kControlPath;
         return false;
     }
 
-    return std::stoi(android::base::Trim(buf)) == 1;
+    return buf.find("On") != std::string::npos;
 }
 
 Return<bool> GloveMode::setEnabled(bool enabled) {
-    
+
     if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kControlPath, true)) {
         LOG(ERROR) << "Failed to write to " << kControlPath;
         return false;

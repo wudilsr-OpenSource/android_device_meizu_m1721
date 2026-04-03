@@ -3,8 +3,8 @@ on init
     chown system system /sys/bus/i2c/devices/3-0038/disable_keys
     chmod 0660 /sys/bus/i2c/devices/3-0038/disable_keys
     # Glove Mode
-    chown system system /sys/class/tp_glove/device/glove_enable
-    chmod 0660 /sys/class/tp_glove/device/glove_enable
+    chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_glove_mode
+    chmod 0660 /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_glove_mode
 
 service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.meizu_m1721
     class hal
