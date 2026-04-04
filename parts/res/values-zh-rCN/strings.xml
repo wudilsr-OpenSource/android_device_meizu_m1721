@@ -18,6 +18,13 @@
     <string name="custom_seekbar_default_value_to_set">默认数值: <xliff:g id="v">%s</xliff:g>\n长按以设置</string>
     <string name="custom_seekbar_default_value_is_set">默认数值已设定</string>
 
+    <!-- Dirac -->
+    <string name="dirac_title">Dirac 音效增强</string>
+    <string name="dirac_summary">使用 Dirac 技术优化音质</string>
+    <string name="dirac_enable">启用 Dirac</string>
+    <string name="dirac_headset_title">耳机类型</string>
+    <string name="dirac_preset_title">均衡器预设</string>
+
     <!-- mBack -->
     <string name="mback_title">mBack 设置</string>
     <string name="mback_summary">控制 mBack 振动与音效</string>
