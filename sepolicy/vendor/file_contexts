@@ -6,6 +6,7 @@
 
 # Glove Mode (FTS touchscreen sysfs)
 /sys/devices/platform/soc/78b7000\.i2c/i2c-3/3-0038/fts_glove_mode u:object_r:proc_touchpanel:s0
+/sys/devices/platform/soc/78b7000\.i2c/i2c-3/3-0038/fts_cover_mode u:object_r:proc_touchpanel:s0
 
 # Goodix Fingerprint
 /dev/goodix_fp                                  u:object_r:goodixfingerprintd_device:s0

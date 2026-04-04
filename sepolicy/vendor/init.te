@@ -15,5 +15,8 @@ allow init sysfs_leds:lnk_file read;
 # Power
 allow init sysfs_battery_supply:file setattr;
 
+# Touchscreen
+allow init proc_touchpanel:file setattr;
+
 # Wifi
 allow init wcnss_device:chr_file write;
