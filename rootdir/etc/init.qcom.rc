@@ -71,18 +71,13 @@ on early-boot
     chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
 
 on boot
-    chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
-    chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_cover_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_cover_mode
     chown system system /sys/kernel/boot_slpi/ssr
-    chown system system /sys/kernel/boot_adsp/ssr
 
     # Focaltech DT2W
     chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/enable_dt2w
     chmod 0664 /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/enable_dt2w
-
-    # Goodix DT2W
-    chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-005d/enable_dt2w
-    chmod 0664 /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-005d/enable_dt2w
 
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
