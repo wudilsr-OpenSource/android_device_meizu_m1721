@@ -1,4 +1,5 @@
 allow wcnss_service init:unix_stream_socket connectto;
+dontaudit wcnss_service wifi_data_file:dir search;
 
 dontaudit wcnss_service serialno_prop:file read;
 

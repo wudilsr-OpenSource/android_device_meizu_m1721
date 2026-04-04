@@ -15,6 +15,9 @@ allow init sysfs_leds:lnk_file read;
 # Power
 allow init sysfs_battery_supply:file setattr;
 
+# Remosaic daemon (seclabel transition)
+allow init remosaic_daemon_exec:file { read open execute getattr map };
+
 # Touchscreen
 allow init proc_touchpanel:file setattr;
 
