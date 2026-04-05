@@ -8,6 +8,7 @@ allow mm-qcamerad remosaic_daemon_exec:file { read open execute entrypoint getat
 # Allow binder use
 binder_use(mm-qcamerad);
 vndbinder_use(mm-qcamerad);
+binder_call(mm-qcamerad, mm-qcamerad);
 
 # Add services
 add_service(mm-qcamerad, remosaic_daemon_service)
@@ -24,3 +25,4 @@ allow mm-qcamerad property_socket:sock_file write;
 
 get_prop(hal_camera_default, bootanim_system_prop);
 get_prop(hal_camera_default, camera_prop);
+get_prop(mm-qcamerad, default_prop);
