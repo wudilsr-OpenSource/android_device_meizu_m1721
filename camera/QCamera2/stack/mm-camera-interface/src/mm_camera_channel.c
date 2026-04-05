@@ -888,6 +888,11 @@ int32_t mm_channel_fsm_fn_stopped(mm_channel_t *my_obj,
                     payload->stream_id, payload->buf_cb);
         }
         break;
+    case MM_CHANNEL_EVT_STOP:
+    case MM_CHANNEL_EVT_PAUSE:
+    case MM_CHANNEL_EVT_CANCEL_REQUEST_SUPER_BUF:
+        /* Already stopped, no-op */
+        break;
     default:
         LOGE("invalid state (%d) for evt (%d)",
                     my_obj->state, evt);
