@@ -25,4 +25,4 @@ allow mm-qcamerad property_socket:sock_file write;
 
 get_prop(hal_camera_default, bootanim_system_prop);
 get_prop(hal_camera_default, camera_prop);
-get_prop(mm-qcamerad, default_prop);
+dontaudit mm-qcamerad default_prop:file { read open getattr map };
