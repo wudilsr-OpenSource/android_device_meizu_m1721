@@ -21,13 +21,6 @@
     <string name="custom_seekbar_default_value_to_set">Valore di default: <xliff:g id="v">%s</xliff:g>\nPremere a lungo per impostare</string>
     <string name="custom_seekbar_default_value_is_set">Il valore predefinito è impostato</string>
 
-    <!-- Dirac -->
-    <string name="dirac_title">Miglioramento audio Dirac</string>
-    <string name="dirac_summary">Ottimizza la qualità audio con la tecnologia Dirac</string>
-    <string name="dirac_enable">Abilita Dirac</string>
-    <string name="dirac_headset_title">Tipo di cuffie</string>
-    <string name="dirac_preset_title">Preset equalizzatore</string>
-
     <!-- mBack -->
     <string name="mback_title">Impostazioni mBack</string>
     <string name="mback_summary">Controlla la vibrazione e il suono di mBack</string>

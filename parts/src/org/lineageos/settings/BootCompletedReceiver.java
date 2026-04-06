@@ -20,9 +20,12 @@ package org.lineageos.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.provider.Settings;
 import android.util.Log;
-import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.preferences.FileUtils;
+import org.lineageos.settings.mback.MBackSettings;
+import org.lineageos.settings.mback.KeyHandler;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -36,7 +39,5 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         Log.d(TAG, "Starting Doze service");
       DozeUtils.startService(context);
     }
-
-    new DiracUtils(context).onBootCompleted();
   }
 }

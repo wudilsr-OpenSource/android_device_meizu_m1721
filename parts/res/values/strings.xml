@@ -24,38 +24,6 @@
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
-    <!-- Dirac -->
-    <string name="dirac_title">Dirac Audio Enhancer</string>
-    <string name="dirac_summary">Optimize audio quality with Dirac technology</string>
-    <string name="dirac_enable">Enable Dirac</string>
-    <string name="dirac_headset_title">Headset type</string>
-    <string name="dirac_preset_title">EQ preset</string>
-    <string name="dirac_qs_tile_title">Dirac</string>
-    <string name="dirac_headset_default">Default</string>
-    <string name="dirac_headset_general">General</string>
-    <string name="dirac_headset_general_inear">General In-Ear</string>
-    <string name="dirac_headset_headphone">Headphone</string>
-    <string name="dirac_headset_in_ear">In-Ear</string>
-    <string name="dirac_headset_in_ear_pro">In-Ear Pro</string>
-    <string name="dirac_preset_default">Default</string>
-    <string name="dirac_preset_rock">Rock</string>
-    <string name="dirac_preset_jazz">Jazz</string>
-    <string name="dirac_preset_pop">Pop</string>
-    <string name="dirac_preset_classical">Classical</string>
-    <string name="dirac_preset_hiphop">Hip Hop</string>
-    <string name="dirac_preset_blues">Blues</string>
-    <string name="dirac_preset_electronic">Electronic</string>
-    <string name="dirac_preset_country">Country</string>
-    <string name="dirac_preset_dance">Dance</string>
-    <string name="dirac_preset_metal">Metal</string>
-    <string name="dirac_preset_bass_booster">Bass Booster</string>
-    <string name="dirac_preset_balanced">Balanced</string>
-    <string name="dirac_preset_live">Live</string>
-    <string name="dirac_preset_bass_reduction">Bass Reduction</string>
-    <string name="dirac_preset_treble_reduction">Treble Reduction</string>
-    <string name="dirac_preset_soft_bass">Soft Bass</string>
-    <string name="dirac_preset_soft_treble">Soft Treble</string>
-
     <!-- mBack -->
     <string name="mback_title">mBack settings</string>
     <string name="mback_summary">Control mBack vibration and sound</string>

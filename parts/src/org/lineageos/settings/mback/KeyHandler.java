@@ -11,10 +11,15 @@ import android.view.Display;
 import android.view.KeyEvent;
 import android.os.Vibrator;
 import android.os.VibrationEffect;
+import android.os.ServiceManager;
+import android.app.Fragment;
+import android.app.Activity;
 import android.hardware.display.DisplayManager;
 import android.provider.Settings;
 import android.media.AudioManager;
 import org.lineageos.settings.mback.MBackSettings;
+import org.lineageos.settings.preferences.FileUtils;
+import java.lang.Integer;
 
 import com.android.internal.os.DeviceKeyHandler;
 

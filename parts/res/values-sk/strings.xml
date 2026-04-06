@@ -21,13 +21,6 @@
     <string name="custom_seekbar_default_value_to_set">Pôvodná hodnota: <xliff:g id="v">%s</xliff:g>\nPodržte pre nastavenie</string>
     <string name="custom_seekbar_default_value_is_set">Pôvodná hodnota je nastavená na</string>
 
-    <!-- Dirac -->
-    <string name="dirac_title">Dirac vylepšenie zvuku</string>
-    <string name="dirac_summary">Optimalizujte kvalitu zvuku technológiou Dirac</string>
-    <string name="dirac_enable">Povoliť Dirac</string>
-    <string name="dirac_headset_title">Typ slúchadiel</string>
-    <string name="dirac_preset_title">Predvoľba ekvalizéra</string>
-
     <!-- mBack -->
     <string name="mback_title">mBack nastavenia</string>
     <string name="mback_summary">Nastavte si zvuk a vibráciu tlačidla mBack</string>

@@ -17,17 +17,25 @@
 
 package org.lineageos.settings.mback;
 
+import android.content.Intent;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Vibrator;
 import android.os.VibrationEffect;
 import android.provider.Settings;
+import android.util.Log;
 import android.media.AudioManager;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.ListPreference;
 import org.lineageos.settings.R;
 import org.lineageos.settings.preferences.CustomSeekBarPreference;
+import org.lineageos.settings.preferences.FileUtils;
+import org.lineageos.settings.mback.KeyHandler;
+
+import java.lang.Math;
 
 public class MBackSettings extends PreferenceFragment 
                            implements Preference.OnPreferenceChangeListener {

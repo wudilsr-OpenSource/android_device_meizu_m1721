@@ -21,13 +21,6 @@
     <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nДолгий тап для установки</string>
     <string name="custom_seekbar_default_value_is_set">Значение по умолчанию установлено</string>
 
-    <!-- Dirac -->
-    <string name="dirac_title">Звуковой усилитель Dirac</string>
-    <string name="dirac_summary">Оптимизация качества звука с помощью Dirac</string>
-    <string name="dirac_enable">Включить Dirac</string>
-    <string name="dirac_headset_title">Тип наушников</string>
-    <string name="dirac_preset_title">Предустановка эквалайзера</string>
-
     <!-- mBack -->
     <string name="mback_title">Настройки mBack</string>
     <string name="mback_summary">Control mBack vibration and sound</string>
