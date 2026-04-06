@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.R;
 
 public class MBackSettingsActivity extends CollapsingToolbarBaseActivity {
 
@@ -36,7 +35,7 @@ public class MBackSettingsActivity extends CollapsingToolbarBaseActivity {
         if (fragment == null) {
             mMBackSettingsFragment = new MBackSettings();
             getFragmentManager().beginTransaction()
-                    .add(R.id.content_frame, mMBackSettingsFragment)
+                    .add(com.android.settingslib.collapsingtoolbar.R.id.content_frame, mMBackSettingsFragment)
                     .commit();
         } else {
             mMBackSettingsFragment = (MBackSettings) fragment;
