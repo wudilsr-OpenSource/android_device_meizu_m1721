@@ -60,6 +60,7 @@ Lights::Lights() {
     mLights.push_back(AutoHwLight(LightType::BACKLIGHT));
     mLights.push_back(AutoHwLight(LightType::BATTERY));
     mLights.push_back(AutoHwLight(LightType::NOTIFICATIONS));
+    mLights.push_back(AutoHwLight(LightType::ATTENTION));
 }
 
 ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) {
@@ -73,15 +74,20 @@ ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) 
             break;
         case LightType::BATTERY:
             mBatteryState = state;
-            handleNotification(mBatteryState.color ? mBatteryState : mNotificationState);
             break;
         case LightType::NOTIFICATIONS:
             mNotificationState = state;
-            handleNotification(mBatteryState.color ? mBatteryState : mNotificationState);
+            break;
+        case LightType::ATTENTION:
+            mAttentionState = state;
             break;
         default:
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
+
+    handleNotification(mBatteryState.color     ? mBatteryState
+                       : mAttentionState.color ? mAttentionState
+                                               : mNotificationState);
 
     return ndk::ScopedAStatus::ok();
 }

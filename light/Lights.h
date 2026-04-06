@@ -32,6 +32,7 @@ class Lights : public BnLights {
     std::mutex mLock;
     HwLightState mBatteryState;
     HwLightState mNotificationState;
+    HwLightState mAttentionState;
     std::vector<HwLight> mLights;
 };
 
