@@ -1823,11 +1823,6 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|000e0d2ac4450c0ad8baca06985bc
 vendor/lib64/vendor.qti.latency@2.0.so|82196d2863e012ad2b6e1b9af9d9ce7c611f64be
 vendor/lib64/vendor.qti.latency@2.1.so|d279c5e456bb3e546130df3cd6f398cea6b48eaf
 
-# Dirac
-vendor/etc/diracmobile.config
-vendor/lib/soundfx/libdirac.so
-vendor/lib/libDiracAPI_SHARED.so
-
 # DPM - from Fairphone/FP3/FP3-REL-6.A.023.1-gms-497e9bef-user
 system_ext/bin/dpmd|dc94ffe90c6658b0bc99c64f68517c4048d0321a
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5

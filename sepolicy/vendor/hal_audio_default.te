@@ -2,7 +2,4 @@ allow hal_audio_default sysfs:dir r_dir_perms;
 allow hal_audio_default thermal_socket:sock_file rw_file_perms;
 allow hal_audio_default thermal-engine:unix_stream_socket connectto;
 
-# Dirac audio enhancer
-get_prop(hal_audio_default, vendor_dirac_prop);
-
 diag_use(hal_audio_default);
