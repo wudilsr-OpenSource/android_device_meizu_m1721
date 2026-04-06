@@ -47,6 +47,8 @@ pm.dexopt.shared=quicken
 debug.hwui.renderer=vulkan
 debug.hwui.skia_atrace_enabled=false
 debug.sf.latch_unsignaled=1
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
 
 # Fingerprint
 persist.qfp=false
