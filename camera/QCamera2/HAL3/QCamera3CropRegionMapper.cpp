@@ -1,4 +1,4 @@
-/* Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2015-2016, 2020, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -34,6 +34,7 @@
 // Camera dependencies
 #include "QCamera3CropRegionMapper.h"
 #include "QCamera3HWI.h"
+#include "math.h"
 
 extern "C" {
 #include "mm_camera_dbg.h"
@@ -127,16 +128,24 @@ void QCamera3CropRegionMapper::update(uint32_t active_array_w,
 void QCamera3CropRegionMapper::toActiveArray(int32_t& crop_left, int32_t& crop_top,
         int32_t& crop_width, int32_t& crop_height)
 {
+   float tmpLeft, tmpTop, tmpWidth, tmpHeight;
+
     if (mSensorW == 0 || mSensorH == 0 ||
             mActiveArrayW == 0 || mActiveArrayH == 0) {
         LOGE("sensor/active array sizes are not initialized!");
         return;
     }
 
-    crop_left = crop_left * mActiveArrayW / mSensorW;
-    crop_top = crop_top * mActiveArrayH / mSensorH;
-    crop_width = crop_width * mActiveArrayW / mSensorW;
-    crop_height = crop_height * mActiveArrayH / mSensorH;
+    tmpLeft = (float)crop_left * mSensorW / mActiveArrayW;
+    tmpTop = (float)crop_top * mSensorH / mActiveArrayH;
+    tmpWidth = (float)crop_width * mSensorW / mActiveArrayW;
+    tmpHeight = (float)crop_height * mSensorH / mActiveArrayH;
+
+
+    crop_left = ceil(tmpLeft);
+    crop_top  = ceil(tmpTop);
+    crop_width = ceil(tmpWidth);
+    crop_height = ceil(tmpHeight);
 
     boundToSize(crop_left, crop_top, crop_width, crop_height,
             mActiveArrayW, mActiveArrayH);
