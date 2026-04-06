@@ -176,8 +176,6 @@ on charger
     restart thermal-engine
 
 on boot
-    chown system system /sys/kernel/hbtp/display_pwr
-
     # Battery life saver
     chown system system /sys/class/power_supply/battery/charging_enabled
     chmod 0666 /sys/class/power_supply/battery/charging_enabled
