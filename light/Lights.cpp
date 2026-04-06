@@ -46,7 +46,8 @@ static void writeInt(const std::string& path, uint32_t value) {
     }
 }
 
-#define AutoHwLight(light) {.id = (int32_t)light, .type = light, .ordinal = 0}
+#define AutoHwLight(light) \
+    { .id = (int32_t)light, .type = light, .ordinal = 0 }
 
 }  // anonymous namespace
 
@@ -111,7 +112,7 @@ void Lights::handleNotification(const HwLightState& state) {
     }
 }
 
-} // namespace light
-} // namespace hardware
-} // namespace android
-} // namespace aidl
+}  // namespace light
+}  // namespace hardware
+}  // namespace android
+}  // namespace aidl

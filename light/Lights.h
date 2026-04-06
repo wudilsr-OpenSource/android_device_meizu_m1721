@@ -35,7 +35,7 @@ class Lights : public BnLights {
     std::vector<HwLight> mLights;
 };
 
-} // namespace light
-} // namespace hardware
-} // namespace android
-} // namespace aidl
+}  // namespace light
+}  // namespace hardware
+}  // namespace android
+}  // namespace aidl
