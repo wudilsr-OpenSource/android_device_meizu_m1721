@@ -31,9 +31,6 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
 
 # Audio - from Fairphone/FP3/FP3-REL-6.A.023.1-gms-497e9bef-user
-vendor/lib/soundfx/libqcbassboost.so|fbeb7fc080f5fce028eb34e021367037483d1819
-vendor/lib/soundfx/libqcreverb.so|92a1d4491fb3213e96db1201a9846b40968059cf
-vendor/lib/soundfx/libqcvirt.so|8730643ba19de92fc1d4578a532cae8deb73059b
 vendor/lib/libadm.so|0c12ba8a37d5c01f49d58c36b9fb84354ae568a9
 vendor/lib/libdrc.so|7dbd6cef13d7e8ad18b1a49aa92a7d83da24c96a
 
