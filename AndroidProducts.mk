@@ -15,8 +15,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_m1721.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_m1721-user \
-    lineage_m1721-userdebug \
-    lineage_m1721-eng
