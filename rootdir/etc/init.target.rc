@@ -188,10 +188,10 @@ on boot
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
 #USB controller configuration
-    setprop sys.usb.rndis.func.name "rndis_bam"
-    setprop sys.usb.rmnet.func.name "rmnet_bam"
-    setprop sys.usb.rmnet.inst.name "rmnet"
-    setprop sys.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.rndis.func.name "rndis_bam"
+    setprop vendor.usb.rmnet.func.name "rmnet_bam"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
 
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
