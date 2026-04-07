@@ -11,12 +11,6 @@ binder_call(goodixfingerprintd, hal_fingerprint_default)
 # Add services
 add_service(goodixfingerprintd, goodixfingerprintd_service)
 
-typeattribute goodixfingerprintd data_between_core_and_vendor_violators;
-
-# Allow storing goodix data
-allow goodixfingerprintd { persist_drm_file goodixfingerprintd_data_file }:dir create_dir_perms;
-allow goodixfingerprintd { persist_drm_file goodixfingerprintd_data_file }:file create_file_perms;
-
 # Allow access to goodix device
 allow goodixfingerprintd goodixfingerprintd_device:chr_file rw_file_perms;
 
