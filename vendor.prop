@@ -99,7 +99,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Media
-debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=16
 vendor.vidc.debug.level=0
 vendor.vidc.dec.downscalar_height=1088
