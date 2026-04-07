@@ -1,11 +1,13 @@
 //
-// Copyright (C) 2021-2022 The LineageOS Project
+// Copyright (C) 2021-2024 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 cc_binary {
     name: "android.hardware.light-service.meizu_m1721",
+    defaults: ["hidl_defaults"],
+    vendor: true,
     relative_install_path: "hw",
     init_rc: ["android.hardware.light-service.meizu_m1721.rc"],
     vintf_fragments: ["android.hardware.light-service.meizu_m1721.xml"],
@@ -18,5 +20,4 @@ cc_binary {
         "libbinder_ndk",
         "android.hardware.light-V2-ndk",
     ],
-    vendor: true,
 }

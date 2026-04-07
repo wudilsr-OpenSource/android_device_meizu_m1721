@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021-2022 The LineageOS Project
+ * Copyright (C) 2021-2024 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -85,9 +85,9 @@ ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) 
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
 
-    handleNotification(mBatteryState.color     ? mBatteryState
-                       : mAttentionState.color ? mAttentionState
-                                               : mNotificationState);
+    handleNotification(mNotificationState.color ? mNotificationState
+                       : mAttentionState.color  ? mAttentionState
+                                                : mBatteryState);
 
     return ndk::ScopedAStatus::ok();
 }
