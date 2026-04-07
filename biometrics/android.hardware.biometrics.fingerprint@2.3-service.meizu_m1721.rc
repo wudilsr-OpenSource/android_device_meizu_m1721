@@ -1,4 +1,4 @@
-service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1721
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.meizu_m1721
     # "class hal" causes a race condition on some devices due to files created
     # in /data. As a workaround, postpone startup until later in boot once
     # /data is mounted.
@@ -6,7 +6,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     user system
     group system input uhid
     task_profiles ServiceCapacityLow
-    interface android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint default
+    interface android.hardware.biometrics.fingerprint@2.3::IBiometricsFingerprint default
 
 service vendor.gx_fpd /vendor/bin/goodixfingerprintd
     disabled
