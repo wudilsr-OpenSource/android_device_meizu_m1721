@@ -61,11 +61,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.gnss</name>
+        <name>android.hardware.configstore</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>1.1</version>
         <interface>
-            <name>IGnss</name>
+            <name>ISurfaceFlingerConfigs</name>
             <instance>default</instance>
         </interface>
     </hal>
