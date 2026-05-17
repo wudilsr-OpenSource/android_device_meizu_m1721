@@ -33,3 +33,4 @@ set_prop(goodixfingerprintd, vendor_fp_prop)
 
 # Ignore all logging requests
 dontaudit goodixfingerprintd storage_file:dir search;
+dontaudit goodixfingerprintd rootfs:dir read;
