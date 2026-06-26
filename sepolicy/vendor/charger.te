@@ -1,0 +1,4 @@
+# Battery power supply sysfs labeled sysfs_battery_supply on this device
+# charger_vendor (health-service.qti --charger) needs read access
+allow charger_vendor sysfs_battery_supply:dir r_dir_perms;
+allow charger_vendor sysfs_battery_supply:file r_file_perms;

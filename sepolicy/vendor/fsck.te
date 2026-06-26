@@ -1,0 +1,2 @@
+# Suppress: fsck.f2fs reading partition sysfs node during boot check (harmless)
+dontaudit fsck sysfs:file getattr;

@@ -1,3 +1,8 @@
+# Display / HWC (set from vendor.prop)
+persist.demo.hdmirotationlock    u:object_r:vendor_display_prop:s0
+persist.hwc.enable_vds           u:object_r:vendor_display_prop:s0
+persist.hwc.mdpcomp.enable       u:object_r:vendor_display_prop:s0
+
 # Audio
 audio_hal.in_period_size        u:object_r:vendor_audio_prop:s0
 
