@@ -82,10 +82,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
     ('vendor/lib/libmmcamera_dbg.so', 'libmmcamera_pdafcamif.so', 'libmmcamera_pdaf.so', 'libmmcamera_imx258_mono.so', 'libjpegehw.so', 'libjpegdhw.so', 'libmmcamera_hdr_gb_lib', 'libmmcamera2_sensor_modules.so', 'libjpegdmahw.so', 'libmmcamera_imx258.so', 'libmmcamera_le2464c_master_eeprom', 'libmmcamera_tintless_bg_pca_algo.so', 'libqomx_jpegenc.so', 'libqomx_jpegdec.so', 'libqomx_jpegenc_pipe.so'): blob_fixup()
         .add_needed('liblog.so'),
-    'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
-        .regex_replace(r'android.hardware.radio.config@1.0.so', r'android.hardware.radio.c_shim@1.0.so')
-        .regex_replace(r'android.hardware.radio.config@1.1.so', r'android.hardware.radio.c_shim@1.1.so')
-        .regex_replace(r'android.hardware.radio.config@1.2.so', r'android.hardware.radio.c_shim@1.2.so'),
     'vendor/lib64/libthermalfeature.so': blob_fixup()
         .regex_replace(r'system/etc/', r'vendor/etc/')
 }  # fmt: skip
