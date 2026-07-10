@@ -2245,7 +2245,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|aa98e9afc4cac9fa5be51bbba359a74973f
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|62cd64dbb25d082cfdc742fb03931ba0f9abe434
 
 # Radio (IMS VT) - from FP3-REL-6.A.031.5-gms-fa7632b5-user
-system_ext/lib64/lib-imscamera.so|8170256dbf9120ff05f193ba937c718d9c580881
+system_ext/lib64/lib-imscamera.so|eb4793955c903ccc1d1a2e88d48cc0c220add09b
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|b90664b4ce069358f36801da5ceac10baf4ebcc6
 system_ext/lib64/lib-imsvtextutils.so|1acf1de305e455a3a924483e5652b37133d10fd1
 system_ext/lib64/lib-imsvt.so|0b2065c9b500a11d39aa49f32dd06267e083fabb

@@ -47,6 +47,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'\n$', '\n    capabilities NET_BIND_SERVICE\n'),
     'vendor/lib64/libgf_ca.so': blob_fixup()
         .regex_replace(r'/system/etc/firmware', r'/vendor/firmware/gxf'),
+    'system_ext/lib64/lib-imscamera.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so')
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
