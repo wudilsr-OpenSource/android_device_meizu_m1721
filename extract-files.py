@@ -35,7 +35,6 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
-    ('libwpa_client'): lib_fixup_remove,
 }
 
 # Define the blob fixups
