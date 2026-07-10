@@ -2018,7 +2018,6 @@ vendor/lib/libsmwrapper.so|1376bf567a0a225d1ac8c623db4ace9a7e3804f7
 # Media - from FP3-REL-6.A.031.5-gms-fa7632b5-user
 vendor/etc/seccomp_policy/mediacodec.policy|3dec19ed56099a36b44cc72ad04ab23b9cc22ace
 vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
-vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor|28d324f37d535d53916cb894caf3bb037bbf146d
 vendor/lib/libOmxAacDec.so|ce6447b7138f0e0cf365d97668a5ded072683234
 vendor/lib/libOmxAmrDec.so|78ad175f009fe3fe3e316c9469184142ae813b24
 vendor/lib/libOmxAmrwbplusDec.so|087c71ccc858e4e5d048f5150c39b7f3619ccf02
@@ -2029,7 +2028,6 @@ vendor/lib/libOmxG711Dec.so|e95941e80d00bf94944868750e1c55ef2aa601ba
 vendor/lib/libOmxQcelp13Dec.so|49291073551d311fde33f76eed6b420615bee382
 vendor/lib/libOmxWmaDec.so|f93ed022df05fbf6b7cbda0bd88eebfac47f47da
 vendor/lib/libvqzip.so|c56eaffef2066339493fa6810930e58556891027
-vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor|d400435a7bb49c1589efd0a63274cbf6d53f0c7b
 
 # Perf - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|8661609a6155d1ba635ab867a301455003971842
