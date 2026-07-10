@@ -468,9 +468,6 @@
     <!-- Whether to select voice/data/sms preference without user confirmation. -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
 
-    <!-- Whether to cancel fingerprint operation if not idle -->
-    <bool name="config_fpCancelIfNotIdle">true</bool>
-
     <!-- Display white balance uses the color temperature sensor to compute the correct display
          white balance. The sensor name used to determine the display color temperature can be
          overridden here to use a custom sensor. If left empty, the default sensor will be used. -->
