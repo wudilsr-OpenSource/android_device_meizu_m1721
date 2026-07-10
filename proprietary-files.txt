@@ -2290,4 +2290,4 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
 
 # Wi-Fi - from FP3-REL-6.A.031.5-gms-fa7632b5-user
-vendor/bin/wcnss_service|18a234235418d01f7b6faa8a6bea78de5f4d346a
+vendor/bin/wcnss_service:vendor/bin/wcnss_service_meizu|18a234235418d01f7b6faa8a6bea78de5f4d346a
