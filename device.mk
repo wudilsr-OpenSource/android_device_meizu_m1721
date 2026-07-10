@@ -290,6 +290,7 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.qcom.ramdisk \
     fstab.zram \
     init.qcom.post_boot.sh \
     init.qcom.rc \
