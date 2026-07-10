@@ -132,34 +132,16 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth@1.0.vendor:64 \
-    android.hardware.bluetooth.audio-impl \
-    vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
-    vendor.qti.hardware.btconfigstore@2.0.vendor:64
+    android.hardware.bluetooth.audio-impl
 
  # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    android.hidl.base@1.0.vendor \
-    android.hardware.camera.device@3.5 \
-    android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4-external \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.6 \
-    camera.device@1.0-impl \
-    camera.device@3.5-impl \
-    camera.device@3.6-external-impl \
-    camera.msm8953 \
-    libcamshim \
-    libui_shim \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    camera.msm8953
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -178,11 +160,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
-    libgralloc.qti \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    vendor.display.config@1.0.vendor \
     vendor.qti.hardware.memtrack-service
 
 # Device-specific settings
@@ -191,7 +168,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-V1-ndk.vendor \
     android.hardware.drm-service.clearkey
 
 PRODUCT_COPY_FILES += \
@@ -204,8 +180,6 @@ PRODUCT_PACKAGES += \
 
 # Fwk-detect
 PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
@@ -229,10 +203,8 @@ PRODUCT_PACKAGES += \
     liblocation_api_headers \
     libgps.utils_headers \
     liblocation_api \
-    libgps.utils \
     libbatching \
     libgeofencing \
-    libloc_core \
     libgnss
 
 # Health
@@ -241,20 +213,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # IMS
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     ims-ext-common \
-    ims_ext_common.xml \
-    libgui_shim:64
+    ims_ext_common.xml
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
@@ -297,7 +260,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor \
     libnbaio
 
 # OMX
@@ -316,26 +278,15 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power-service-qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
 
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
-
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -355,12 +306,6 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    librmnetctl \
-    libsqlite.vendor:64 \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
@@ -372,11 +317,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service \
-    libpower.vendor \
-    libsensorndkbridge:64
+    android.hardware.sensors@1.0-service
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -415,14 +357,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
     
-# VNDK
-PRODUCT_PACKAGES += \
-    libstdc++_vendor
-
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    android.system.net.netd@1.1.vendor:64 \
     libcld80211:64 \
     libwpa_client:64 \
     hostapd \
