@@ -36,7 +36,6 @@ BOARD_VENDOR := Meizu
 PRODUCT_GMS_CLIENTID_BASE := android-meizu
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="meizu_M6Note_CN-user 7.1.2 N2G47H m1721.Flyme_8.0.1592979314 release-keys"
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Meizu/meizu_M6Note_CN/M6Note:7.1.2/N2G47H/m1721.Flyme_8.0.1592979314:user/release-keys"
+    BuildDesc="meizu_M6Note_CN-user 7.1.2 N2G47H m1721.Flyme_8.0.1592979314 release-keys" \
+    BuildFingerprint="Meizu/meizu_M6Note_CN/M6Note:7.1.2/N2G47H/m1721.Flyme_8.0.1592979314:user/release-keys" \
+    DeviceProduct=m1721
