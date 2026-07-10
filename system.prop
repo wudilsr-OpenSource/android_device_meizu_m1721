@@ -140,6 +140,7 @@ ro.hw_timeout_multiplier=12
 
 # WiFi
 persist.mm.sta.enable=0
+wifi.interface=wlan0
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
