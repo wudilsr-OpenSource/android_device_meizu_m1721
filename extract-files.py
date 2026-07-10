@@ -48,7 +48,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libgf_ca.so': blob_fixup()
         .regex_replace(r'/system/etc/firmware', r'/vendor/firmware/gxf'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
+        .add_needed('libgui_shim.so')
+        .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
     'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
         .regex_replace(r'android.hardware.radio.config@1.0.so', r'android.hardware.radio.c_shim@1.0.so')
         .regex_replace(r'android.hardware.radio.config@1.1.so', r'android.hardware.radio.c_shim@1.1.so')

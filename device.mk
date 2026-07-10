@@ -178,7 +178,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
-    libqdMetaData \
+    libgralloc.qti \
+    libqdMetaData.system \
     libtinyxml \
     libvulkan \
     vendor.display.config@1.0.vendor \
