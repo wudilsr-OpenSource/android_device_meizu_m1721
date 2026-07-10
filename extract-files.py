@@ -57,19 +57,14 @@ blob_fixups: blob_fixups_user_type = {
     # Camera - shims, uneeded & VNDK fixups
     'vendor/lib/libmmcamera_ppeiscore.so': blob_fixup()
         .add_needed('libppeiscore_shim.so')
-        .remove_needed('libgui.so')
         .replace_needed('libGLESv2.so', 'libGLESv2_adreno.so'),
     'vendor/lib/libmmcamera_tuning.so': blob_fixup()
         .remove_needed('libmm-qcamera.so'),
-    'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
-        .remove_needed('libandroid.so')
-        .remove_needed('libgui.so')
-        .regex_replace(r'libandroid.so', r'libcamshim.so'),
-    'vendor/lib/libmpbase.so': blob_fixup()
-        .remove_needed('libandroid.so')
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    ('vendor/lib/libmmcamera2_stats_modules.so', 'vendor/lib/libmpbase.so'): blob_fixup()
+        .add_needed('libcamshim.so')
+        .remove_needed('libandroid.so'),
     # Camera - liblog dep.
-    ('vendor/lib/libmmcamera_dbg.so', 'vendor/lib/libmmcamera_pdafcamif.so', 'vendor/lib/libmmcamera_pdaf.so', 'vendor/lib/libmmcamera_imx258_mono.so', 'vendor/lib/libjpegehw.so', 'vendor/lib/libjpegdhw.so', 'vendor/lib/libmmcamera_hdr_gb_lib', 'vendor/lib/libmmcamera2_sensor_modules.so', 'vendor/lib/libjpegdmahw.so', 'vendor/lib/libmmcamera_imx258.so', 'vendor/lib/libmmcamera_le2464c_master_eeprom', 'vendor/lib/libmmcamera_tintless_bg_pca_algo.so', 'vendor/lib/libqomx_jpegenc.so', 'vendor/lib/libqomx_jpegdec.so', 'vendor/lib/libqomx_jpegenc_pipe.so'): blob_fixup()
+    ('vendor/lib/libmmcamera_dbg.so', 'vendor/lib/libmmcamera_pdafcamif.so', 'vendor/lib/libmmcamera_pdaf.so', 'vendor/lib/libmmcamera_imx258_mono.so', 'vendor/lib/libjpegehw.so', 'vendor/lib/libjpegdhw.so', 'vendor/lib/libmmcamera_hdr_gb_lib.so', 'vendor/lib/libmmcamera2_sensor_modules.so', 'vendor/lib/libjpegdmahw.so', 'vendor/lib/libmmcamera_imx258.so', 'vendor/lib/libmmcamera_le2464c_master_eeprom.so', 'vendor/lib/libmmcamera_tintless_bg_pca_algo.so', 'vendor/lib/libqomx_jpegenc.so', 'vendor/lib/libqomx_jpegdec.so', 'vendor/lib/libqomx_jpegenc_pipe.so'): blob_fixup()
         .add_needed('liblog.so'),
     # Goodix
     'vendor/lib64/libgf_ca.so': blob_fixup()
@@ -109,9 +104,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
         .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
-        .remove_needed('libandroid.so')
-        .remove_needed('libgui.so')
-        .regex_replace(r'libandroid.so', r'libcamshim.so'),
+        .add_needed('libcamshim.so')
+        .remove_needed('libandroid.so'),
 }  # fmt: skip
 
 # Define the module
