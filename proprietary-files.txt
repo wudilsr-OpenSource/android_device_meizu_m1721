@@ -1,7 +1,6 @@
 # Current blobs with ELF checks disabled:
 # libcne, libwqe, imsdatadaemon, lowi-server depend on libwpa_client, which is a gnu makefile target
 # libmmcamera_faceproc, libmmcamera_faceproc2 depends on NDK libc and build is unable to resolve its symbols
-# libmmcamera_ppeiscore is unable to resolve various missing symbols
 
 # ADSP - from FP3-REL-6.A.031.5-gms-fa7632b5-user
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
@@ -224,7 +223,7 @@ vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
-vendor/lib/libmmcamera_ppeiscore.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so
 vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so
 vendor/lib/libmmcamera_quadracfa.so

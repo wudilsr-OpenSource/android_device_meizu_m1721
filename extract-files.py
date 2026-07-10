@@ -56,8 +56,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     # Camera - shims, uneeded & VNDK fixups
     'vendor/lib/libmmcamera_ppeiscore.so': blob_fixup()
-        .add_needed('libui_shim.so')
-        .remove_needed('libgui.so'),
+        .add_needed('libppeiscore_shim.so')
+        .remove_needed('libgui.so')
+        .replace_needed('libGLESv2.so', 'libGLESv2_adreno.so'),
     'vendor/lib/libmmcamera_tuning.so': blob_fixup()
         .remove_needed('libmm-qcamera.so'),
     'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
