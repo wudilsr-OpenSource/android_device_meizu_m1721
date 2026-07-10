@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Inherit from m1721 device
+AB_OTA_UPDATER := false
 $(call inherit-product, device/meizu/m1721/device.mk)
 
 # Inherit some common LineageOS stuff.
