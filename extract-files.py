@@ -43,6 +43,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libmmcamera_ppeiscore.so': blob_fixup()
         .add_needed('libui_shim.so')
         .remove_needed('libgui.so'),
+    'vendor/lib/libmmcamera_tuning.so': blob_fixup()
+        .remove_needed('libmm-qcamera.so'),
     'vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc': blob_fixup()
         .regex_replace(r'\n$', '\n    capabilities NET_BIND_SERVICE\n'),
     'vendor/lib64/libgf_ca.so': blob_fixup()
