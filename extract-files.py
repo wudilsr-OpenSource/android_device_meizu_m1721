@@ -27,8 +27,23 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libandroid.so')
         .remove_needed('libgui.so')
         .regex_replace(r'libandroid.so', r'libcamshim.so'),
+    'vendor/lib/libchromaflash.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libmmcamera_hdr_gb_lib.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib/libmpbase.so': blob_fixup()
-        .remove_needed('libandroid.so'),
+        .remove_needed('libandroid.so')
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/liboptizoom.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libtrueportrait.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libts_detected_face_hal.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libts_face_beautify_hal.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libubifocus.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib/libmmcamera_ppeiscore.so': blob_fixup()
         .add_needed('libui_shim.so')
         .remove_needed('libgui.so'),
