@@ -42,7 +42,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    bootable/deprecated-ota
 
 # Permissions
 PRODUCT_COPY_FILES += \
