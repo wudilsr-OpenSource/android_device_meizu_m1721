@@ -13,6 +13,15 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'device/meizu/m1721',
+    'hardware/qcom-caf/msm8953',
+    'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/display',
+]
+
+
 # Define the blob fixups
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libmmcamera2_sensor_modules.so': blob_fixup()
@@ -67,6 +76,7 @@ module = ExtractUtilsModule(
     'm1721',
     'meizu',
     blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
