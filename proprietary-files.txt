@@ -191,7 +191,6 @@ vendor/lib/libmmcamera_isp_template.so
 vendor/lib/libmmcamera_isp_wb40.so
 vendor/lib/libmmcamera_le2464c_eeprom.so
 vendor/lib/libmmcamera_le2464c_master_eeprom.so
-vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_ofilm_s5k3p3_le2464_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
@@ -235,7 +234,6 @@ vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmcamera_sony_imx214_eeprom.so
 vendor/lib/libmmcamera_sony_imx298_eeprom.so
 vendor/lib/libmmcamera_sony_imx378_eeprom.so
-vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sunny_8856_eeprom.so
 vendor/lib/libmmcamera_sunny_8865_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64a_imx362_eeprom.so
