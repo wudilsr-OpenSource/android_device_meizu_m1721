@@ -133,7 +133,7 @@ service thermal-engine /vendor/bin/thermal-engine
 on property:sys.boot_completed=1
     restart thermal-engine
 
-service vendor.wcnss-service /vendor/bin/wcnss_service_meizu
+service vendor.wcnss-service /vendor/bin/wcnss_service
     class core
     user system
     group system wifi radio
