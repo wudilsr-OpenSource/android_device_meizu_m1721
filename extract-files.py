@@ -41,14 +41,14 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     # Camera - Path fixups
     'vendor/bin/mm-qcamera-daemon': blob_fixup()
-        .regex_replace(r'/data/misc/camera/cam_socket', r'/data/vendor/qcam/cam_socket'),
+        .binary_regex_replace(b'/data/misc/camera/cam_socket', b'/data/vendor/qcam/cam_socket'),
     'vendor/lib/libmmcamera2_sensor_modules.so': blob_fixup()
-        .regex_replace(r'/system/etc/camera', r'/vendor/etc/camera'),
+        .binary_regex_replace(b'/system/etc/camera', b'/vendor/etc/camera'),
     ('vendor/lib/libmmcamera2_cpp_module.so', 'vendor/lib/libmmcamera2_dcrf.so', 'vendor/lib/libmmcamera2_iface_modules.so', 'vendor/lib/libmmcamera2_imglib_modules.so', 'vendor/lib/libmmcamera2_mct.so', 'vendor/lib/libmmcamera2_pproc_modules.so', 'vendor/lib/libmmcamera2_q3a_core.so', 'vendor/lib/libmmcamera2_sensor_modules.so', 'vendor/lib/libmmcamera2_stats_algorithm.so', 'vendor/lib/libmmcamera2_stats_modules.so', 'vendor/lib/libmmcamera_dbg.so', 'vendor/lib/libmmcamera_imglib.so', 'vendor/lib/libmmcamera_pdafcamif.so', 'vendor/lib/libmmcamera_pdaf.so', 'vendor/lib/libmmcamera_tintless_algo.so', 'vendor/lib/libmmcamera_tintless_bg_pca_algo.so', 'vendor/lib/libmmcamera_tuning.so'): blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/'),
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/'),
     # Camera - Property fixup
     'vendor/lib/libmmcamera_dbg.so': blob_fixup()
-        .regex_replace(r'persist.camera.debug.logfile', r'persist.vendor.camera.dbglog'),
+        .binary_regex_replace(b'persist.camera.debug.logfile', b'persist.vendor.camera.dbglog'),
     # Camera - libstdc++.so -> libstdc++_vendor.so
     ('vendor/lib/libmmcamera_hdr_gb_lib.so', 'vendor/lib/liboptizoom.so', 'vendor/lib/libtrueportrait.so', 'vendor/lib/libubifocus.so', 'vendor/lib/libchromaflash.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
@@ -66,7 +66,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     # Goodix
     'vendor/lib64/libgf_ca.so': blob_fixup()
-        .regex_replace(r'/system/etc/firmware', r'/vendor/firmware/gxf'),
+        .binary_regex_replace(b'/system/etc/firmware', b'/vendor/firmware/gxf'),
     # Gnss
     'vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc': blob_fixup()
         .regex_replace(r'\n$', '\n    capabilities NET_BIND_SERVICE\n'),
@@ -78,30 +78,30 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
     # Thermal
     'vendor/lib64/libthermalfeature.so': blob_fixup()
-        .regex_replace(r'system/etc/', r'vendor/etc/'),
+        .binary_regex_replace(b'system/etc/', b'vendor/etc/'),
     # Camera - Override: combined fixups for conflicting entries
     'vendor/lib/libmmcamera2_sensor_modules.so': blob_fixup()
-        .regex_replace(r'/system/etc/camera', r'/vendor/etc/camera')
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/system/etc/camera', b'/vendor/etc/camera')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera_dbg.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
-        .regex_replace(r'persist.camera.debug.logfile', r'persist.vendor.camera.dbglog')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
+        .binary_regex_replace(b'persist.camera.debug.logfile', b'persist.vendor.camera.dbglog')
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera_tuning.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .remove_needed('libmm-qcamera.so'),
     'vendor/lib/libmmcamera_pdafcamif.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera_pdaf.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera_tintless_bg_pca_algo.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .add_needed('liblog.so'),
     'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
-        .regex_replace(r'/data/misc/camera/', r'/data/vendor/qcam/')
+        .binary_regex_replace(b'/data/misc/camera/', b'/data/vendor/qcam/')
         .add_needed('libcamshim.so')
         .remove_needed('libandroid.so'),
 }  # fmt: skip
